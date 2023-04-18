@@ -15,7 +15,7 @@ document.querySelector('input[id=pesquisar]').addEventListener('click',()=>{
                     fetch(valor.url)
                         .then(response => response.json())
                         .then(singlePokemon => {
-                            pokemons.push({ nome: valor.name, imagem: singlePokemon.sprites.front_default });
+                            pokemons.push({ nome: valor.name, imagem: singlePokemon.sprites.other["official-artwork"].front_default });
 
                             if (pokemons.length == quantidade) {
                                 var pokemonBoxes = document.querySelector('.pokemonBoxes');
