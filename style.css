@@ -12,7 +12,7 @@ body{
 .main{
     margin: 20px auto;
     max-width: 95vw;
-    max-height: 93vh;
+    height: 93vh;
     background-color: #ffffff;
     padding: 20px 2%;
     text-align: center;
@@ -28,15 +28,23 @@ body{
 }
 
 .main input{
-    width: 50%;
+    width: 10%;
     height: 40px;
-    padding-left: 10px;
+    padding-left: 5px;
     border-radius: 5px;
+    font-family: 'Work Sans', sans-serif;
     
 }
 
+p{
+    color: #000000;
+    font-size: 21px;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+}
+
 .pokemonBoxes{
-    max-height:55vh;
+    max-height:53vh;
     margin: 20px 0;
     display: flex;
     flex-wrap: wrap;
@@ -46,7 +54,7 @@ body{
 .pokemonBox{
     width: 21%;
     margin: 20px 2%;
-    background-color: #dddddd;
+    background-color: #eeeeee;
     border-radius: 10px;
 }
 
@@ -59,8 +67,20 @@ body{
     font-size: 21px;
     text-align: center;
     padding: 10px 0;
+    font-family: 'Work Sans', sans-serif;
 }
 
+::-webkit-scrollbar{
+    background-color: #eeeeee;
+    width: 10px;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #b80000;
+    border-radius: 5px;
+    height: 25px;
+}
 
 @media(max-width: 768px){
     .pokemonBox{
@@ -69,5 +89,11 @@ body{
     }
     .pokemonBox img{
         max-width: 300px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .main input{
+        width: 40%;
     }
 }

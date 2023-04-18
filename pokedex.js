@@ -3,6 +3,10 @@ var quantidade = document.getElementById('quantidade');
 document.querySelector('input[id=pesquisar]').addEventListener('click',()=>{
     
     pegaPokemons(quantidade.value);
+
+    function capitalizar(string){
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
     
     function pegaPokemons(quantidade){
         fetch('https://pokeapi.co/api/v2/pokemon?limit='+quantidade)
@@ -21,7 +25,7 @@ document.querySelector('input[id=pesquisar]').addEventListener('click',()=>{
                                 var pokemonBoxes = document.querySelector('.pokemonBoxes');
                                 pokemonBoxes.innerHTML = "";
                                 pokemons.map((valor) => {
-                                    pokemonBoxes.innerHTML += '<div class="pokemonBox"> <img src="' + valor.imagem + '"><p>' + valor.nome + '</p></div>';
+                                    pokemonBoxes.innerHTML += '<div class="pokemonBox"> <img src="' + valor.imagem + '"><p>' + capitalizar(valor.nome) + '</p></div>';
                                 })
                             }
                         })
