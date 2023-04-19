@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,20 +9,30 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="main">
-        <img src="./images/logo.png" class = "logo">
-        <img src="./images/pokebola.png" class = "pokebola">
-        <br>
-        <br>
-        <p>Informe a quantidade de pokemons que deseja pesquisar.</p>
-        <br>
-        <input id="quantidade" type="number">
-        <input type="submit" id = "pesquisar" value="Pesquisar">
-        
-        <div class="pokemonBoxes">
 
+<body>
+    
+    <div class="main">
+        <div class="grid1">
+            <img src="./images/logo.png" class = "logo">
+            <div class="searchBox">
+            <h1>Pokemon number:</h1>
+            <input id="pokemonNumber" type="number">
+            <input type="submit" id = "search" value="Search">
+            </div>
         </div>
+        <div class="grid2">
+            <div class="pokemonSprite">
+                <img src="./images/pikachu.png" class="default">
+            </div>
+            <div class="pokemonInfo" id="info1"></div>
+            <div class="pokemonInfo" id="info2"></div>
+            <div class="pokemonInfo" id="info3"></div>
+            <div class="pokemonInfo" id="info4"></div>
+            <div class="pokemonInfo" id="info5"></div>
+            
+        </div>
+        
 
     </div>
     <script src="pokedex.js"></script> 
